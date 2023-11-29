@@ -3,22 +3,25 @@ package Model;
 import java.util.Objects;
 
 public class Car {
-    private String lisence;
+    private String license;
     private String model;
     private int age;
 
-    public Car(String lisence,String model,int age){
-        this.lisence = lisence;
+    public Car(String license, String model, int age) {
+        this.license = license;
         this.model = model;
         this.age = age;
     }
-
-    public String getLisence() {
-        return lisence;
+    public Car(){
+        this("","",-1);
     }
 
-    public void setLisence(String lisence) {
-        this.lisence = lisence;
+    public String getLicense() {
+        return license;
+    }
+
+    public void setLicense(String license) {
+        this.license = license;
     }
 
     public String getModel() {
@@ -42,13 +45,13 @@ public class Car {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return Objects.equals(lisence, car.lisence);
+        return license.equals(car.license);
     }
 
     @Override
     public String toString() {
         return "Car{" +
-                "lisence='" + lisence + '\'' +
+                "license='" + license + '\'' +
                 ", model='" + model + '\'' +
                 ", age=" + age +
                 '}';
